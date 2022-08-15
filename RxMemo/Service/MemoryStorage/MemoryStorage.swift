@@ -40,7 +40,7 @@ class MemoryStorage : MemoStorageCRUD{
     
     @discardableResult
     func UpdateMemo(memo: Memo, context: String) -> Observable<Memo> {
-        let update = Memo(origin: memo, updateContext: context)
+        let update = Memo(original: memo, updateContext: context)
         
         if let index  =  list.firstIndex(where: { $0 == memo }){
             list.remove(at: index)

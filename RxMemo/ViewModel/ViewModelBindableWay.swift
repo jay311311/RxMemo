@@ -6,7 +6,20 @@
 //
 
 import Foundation
+import UIKit
 
-protocol ViewModelBindable{
-    associatedtype ViewModel
+protocol ViewModelBindableWay{
+    associatedtype ViewModelWay
+    var viewModel : ViewModelWay! { get set}
+    func bindViewModel()
+}
+
+extension ViewModelBindableWay where Self: UIViewController{
+
+    mutating func bind(viewModel:Self.ViewModelWay){
+        self.viewModel = viewModel
+        loadViewIfNeeded()
+        
+        bindViewModel()
+    }
 }
