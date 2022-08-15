@@ -5,7 +5,6 @@
 //  Created by Jooeun Kim on 2022/08/15.
 //
 
-import Foundation
 import UIKit
 
 protocol ViewModelBindableWay{
@@ -16,7 +15,7 @@ protocol ViewModelBindableWay{
 
 extension ViewModelBindableWay where Self: UIViewController{
 
-    mutating func bind(viewModel:Self.ViewModelWay){
+    mutating func bind(viewModel: Self.ViewModelWay){
         self.viewModel = viewModel
         loadViewIfNeeded()
         

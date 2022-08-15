@@ -23,6 +23,10 @@
 		67FC70CF28AA2C0500E79970 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70CE28AA2C0500E79970 /* DetailViewModel.swift */; };
 		67FC70D128AA2C3700E79970 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70D028AA2C3700E79970 /* EditViewModel.swift */; };
 		67FC70D328AA2F0900E79970 /* ViewModelBindableWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70D228AA2F0900E79970 /* ViewModelBindableWay.swift */; };
+		67FC70D528AA390300E79970 /* ShiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70D428AA390300E79970 /* ShiftModel.swift */; };
+		67FC70D728AA3A2D00E79970 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70D628AA3A2D00E79970 /* Scene.swift */; };
+		67FC70D928AA410200E79970 /* ScenCoordinatorWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70D828AA410200E79970 /* ScenCoordinatorWay.swift */; };
+		67FC70DB28AA427000E79970 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70DA28AA427000E79970 /* SceneCoordinator.swift */; };
 		6B76AD2B6AA101C146635CD2 /* Pods_RxMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2952F248A2738B3DEFDF82 /* Pods_RxMemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +49,10 @@
 		67FC70CE28AA2C0500E79970 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		67FC70D028AA2C3700E79970 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
 		67FC70D228AA2F0900E79970 /* ViewModelBindableWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindableWay.swift; sourceTree = "<group>"; };
+		67FC70D428AA390300E79970 /* ShiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftModel.swift; sourceTree = "<group>"; };
+		67FC70D628AA3A2D00E79970 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		67FC70D828AA410200E79970 /* ScenCoordinatorWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenCoordinatorWay.swift; sourceTree = "<group>"; };
+		67FC70DA28AA427000E79970 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		BDF4DFA885B08A9111123430 /* Pods-RxMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemo.release.xcconfig"; path = "Target Support Files/Pods-RxMemo/Pods-RxMemo.release.xcconfig"; sourceTree = "<group>"; };
 		C9C24C6C91226C40F6A241E2 /* Pods-RxMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemo.debug.xcconfig"; path = "Target Support Files/Pods-RxMemo/Pods-RxMemo.debug.xcconfig"; sourceTree = "<group>"; };
 		EE2952F248A2738B3DEFDF82 /* Pods_RxMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +146,10 @@
 		670C03C528AA0D2D00C41823 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				67FC70D428AA390300E79970 /* ShiftModel.swift */,
+				67FC70D628AA3A2D00E79970 /* Scene.swift */,
+				67FC70D828AA410200E79970 /* ScenCoordinatorWay.swift */,
+				67FC70DA28AA427000E79970 /* SceneCoordinator.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -294,15 +306,19 @@
 			files = (
 				67FC70D128AA2C3700E79970 /* EditViewModel.swift in Sources */,
 				67FC70CD28AA2BA600E79970 /* ListViewModel.swift in Sources */,
+				67FC70DB28AA427000E79970 /* SceneCoordinator.swift in Sources */,
+				67FC70D728AA3A2D00E79970 /* Scene.swift in Sources */,
 				670C03CE28AA167000C41823 /* MemoryStorage.swift in Sources */,
 				670C03CA28AA14F700C41823 /* MemoStorageCRUD.swift in Sources */,
 				670C03AC28AA055B00C41823 /* AppDelegate.swift in Sources */,
 				670C03AE28AA055B00C41823 /* SceneDelegate.swift in Sources */,
 				67FC70C928AA2A3200E79970 /* Model.swift in Sources */,
 				670C03B628AA055B00C41823 /* RxMemo.xcdatamodeld in Sources */,
+				67FC70D528AA390300E79970 /* ShiftModel.swift in Sources */,
 				67FC70C128AA284700E79970 /* ListViewController.swift in Sources */,
 				67FC70C328AA28AB00E79970 /* DetailViewController.swift in Sources */,
 				67FC70CF28AA2C0500E79970 /* DetailViewModel.swift in Sources */,
+				67FC70D928AA410200E79970 /* ScenCoordinatorWay.swift in Sources */,
 				67FC70C528AA28E400E79970 /* EditViewController.swift in Sources */,
 				67FC70D328AA2F0900E79970 /* ViewModelBindableWay.swift in Sources */,
 			);
