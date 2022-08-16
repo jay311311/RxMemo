@@ -27,6 +27,7 @@
 		67FC70D728AA3A2D00E79970 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70D628AA3A2D00E79970 /* Scene.swift */; };
 		67FC70D928AA410200E79970 /* ScenCoordinatorWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70D828AA410200E79970 /* ScenCoordinatorWay.swift */; };
 		67FC70DB28AA427000E79970 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70DA28AA427000E79970 /* SceneCoordinator.swift */; };
+		67FC70DD28ABD08000E79970 /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70DC28ABD08000E79970 /* CommonViewModel.swift */; };
 		6B76AD2B6AA101C146635CD2 /* Pods_RxMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2952F248A2738B3DEFDF82 /* Pods_RxMemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		67FC70D628AA3A2D00E79970 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		67FC70D828AA410200E79970 /* ScenCoordinatorWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenCoordinatorWay.swift; sourceTree = "<group>"; };
 		67FC70DA28AA427000E79970 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		67FC70DC28ABD08000E79970 /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
 		BDF4DFA885B08A9111123430 /* Pods-RxMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemo.release.xcconfig"; path = "Target Support Files/Pods-RxMemo/Pods-RxMemo.release.xcconfig"; sourceTree = "<group>"; };
 		C9C24C6C91226C40F6A241E2 /* Pods-RxMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemo.debug.xcconfig"; path = "Target Support Files/Pods-RxMemo/Pods-RxMemo.debug.xcconfig"; sourceTree = "<group>"; };
 		EE2952F248A2738B3DEFDF82 /* Pods_RxMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +187,7 @@
 				67FC70D028AA2C3700E79970 /* EditViewModel.swift */,
 				67FC70CE28AA2C0500E79970 /* DetailViewModel.swift */,
 				67FC70D228AA2F0900E79970 /* ViewModelBindableWay.swift */,
+				67FC70DC28ABD08000E79970 /* CommonViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				67FC70D528AA390300E79970 /* ShiftModel.swift in Sources */,
 				67FC70C128AA284700E79970 /* ListViewController.swift in Sources */,
 				67FC70C328AA28AB00E79970 /* DetailViewController.swift in Sources */,
+				67FC70DD28ABD08000E79970 /* CommonViewModel.swift in Sources */,
 				67FC70CF28AA2C0500E79970 /* DetailViewModel.swift in Sources */,
 				67FC70D928AA410200E79970 /* ScenCoordinatorWay.swift in Sources */,
 				67FC70C528AA28E400E79970 /* EditViewController.swift in Sources */,
