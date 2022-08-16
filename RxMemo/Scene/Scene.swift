@@ -24,23 +24,29 @@ extension Scene {
             guard let nav  =  storyboard.instantiateViewController(withIdentifier: "ListNav") as? UINavigationController else { fatalError() }
             guard var listVC =  nav.viewControllers.first as? ListViewController else { fatalError() }
             
-            listVC.bind(viewModel: listViewModel)
+            // 바인드 되는시점이 너무빨라 라지타이틀 속성이 먹히지 않음. -> bind 되는 시점 늦추는 방법
+            DispatchQueue.main.async {
+                listVC.bind(viewModel: listViewModel)
+            }
             
             return nav
             
         case .detail(let detailViewModel):
             guard let nav  =  storyboard.instantiateViewController(withIdentifier: "DetailVC") as? UINavigationController else { fatalError() }
             guard var DetailVC =  nav.viewControllers.first as? DetailViewController  else { fatalError() }
+            DispatchQueue.main.async {
+
             DetailVC.bind(viewModel: detailViewModel)
-            
+            }
             return DetailVC
             
         case .edit(let editViewModel):
             guard let nav  =  storyboard.instantiateViewController(withIdentifier: "EditNav") as? UINavigationController else { fatalError() }
             guard var EditNav =  nav.viewControllers.first as? EditViewController  else { fatalError() }
-            
+            DispatchQueue.main.async {
+
             EditNav.bind(viewModel: editViewModel)
-            
+            }
             return nav
         }
     }
