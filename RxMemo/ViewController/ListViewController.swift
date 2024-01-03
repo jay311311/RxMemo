@@ -27,6 +27,8 @@ class ListViewController: UIViewController, ViewModelBindableType {
             cell.textLabel?.text = memo.context
         }
         .disposed(by: rx.disposeBag)
+        
+        addBtn.rx.action = viewModel.makeCreate()
     }
     
     override func viewDidLoad() {
