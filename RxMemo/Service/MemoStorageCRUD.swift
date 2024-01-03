@@ -8,20 +8,20 @@
 import Foundation
 import RxSwift
 
-protocol MemoStorageCRUD{
+protocol MemoStorageCRUD {
     
     @discardableResult
-    func createMemo(context :String) -> Observable<Memo>
+    func createMemo(context: String) -> Observable<Memo>
     
     @discardableResult
     func memoLists() -> Observable<[Memo]>
     
     
     @discardableResult
-    func UpdateMemo(memo:Memo, context: String) -> Observable<Memo>
+    func UpdateMemo(memo: Memo, context: String) -> Observable<Memo>
     
     @discardableResult
-    func deleteMemo(memo:Memo) -> Observable<Memo>
+    func deleteMemo(memo: Memo) -> Observable<Memo>
 }
 
 

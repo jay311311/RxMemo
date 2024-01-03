@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DetailViewModel{
+class DetailViewModel {
     
     
 }

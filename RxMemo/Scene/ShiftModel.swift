@@ -7,17 +7,14 @@
 
 import Foundation
 
-
-//전환방식을 표현하는 열거형
-
-enum ShiftStyle{
+enum ShiftStyle {
     case root
     case push
     case modal
 }
 
 
-enum ShiftError:Error{
+enum ShiftError: Error {
     case navigatorControllerEmpty
     case cantPop
     case unknown

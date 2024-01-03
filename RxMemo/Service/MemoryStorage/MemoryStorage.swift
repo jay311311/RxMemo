@@ -8,20 +8,14 @@
 import Foundation
 import RxSwift
 
-//메모리에 메모를 저장하는 class
-class MemoryStorage : MemoStorageCRUD{
-    // 외부에서 직접 접근할 필요가 없기에 private로 선언
-    // 배열은 옵저버블을 통해 외부로 전해진다.
+class MemoryStorage: MemoStorageCRUD {
     private var list = [
         Memo(context: "hello, rx", date: Date().addingTimeInterval(+10)),
         Memo(context: "hi, rx", date: Date().addingTimeInterval(-10))
     ]
-    // 기본값을 리스트 배열로 선언하기위해 lazy 사용,
-    // subject도 외부에서 직접 접근할 필요가 없기에 private로 선언
-    private lazy var store =  BehaviorSubject<[Memo]>(value: list)
+
+    private lazy var store = BehaviorSubject<[Memo]>(value: list)
     
-    
-    //새로운 메모를 생성하고 배열에 추가
     @discardableResult
     func createMemo(context: String) -> Observable<Memo> {
         let memo = Memo(context: context)
@@ -32,7 +26,6 @@ class MemoryStorage : MemoStorageCRUD{
         return Observable.just(memo)
     }
     
-    // subject 리턴. : 이메소드를 통해 클래스 외부에서 서브젝트에 접근하게된다.
     @discardableResult
     func memoLists() -> Observable<[Memo]> {
         return store
@@ -42,7 +35,7 @@ class MemoryStorage : MemoStorageCRUD{
     func UpdateMemo(memo: Memo, context: String) -> Observable<Memo> {
         let update = Memo(original: memo, updateContext: context)
         
-        if let index  =  list.firstIndex(where: { $0 == memo }){
+        if let index  =  list.firstIndex(where: { $0 == memo }) {
             list.remove(at: index)
             list.insert(update, at: index)
         }
@@ -52,8 +45,7 @@ class MemoryStorage : MemoStorageCRUD{
     
     @discardableResult
     func deleteMemo(memo: Memo) -> Observable<Memo> {
-        if let index  =  list.firstIndex(where: { $0 == memo }){
-            
+        if let index  =  list.firstIndex(where: { $0 == memo }) {
             list.remove(at: index)
         }
         store.onNext(list)

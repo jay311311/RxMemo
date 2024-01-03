@@ -7,18 +7,16 @@
 
 import UIKit
 
-class EditViewController: UIViewController, ViewModelBindableWay {
+class EditViewController: UIViewController, ViewModelBindableType {
 
     var viewModel: EditViewModel!
     
     func bindViewModel() {
         
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
      
     }
-    
-
 }

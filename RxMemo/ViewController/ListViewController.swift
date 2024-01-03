@@ -10,26 +10,26 @@ import RxSwift
 import RxCocoa
 import NSObject_Rx
 
-class ListViewController: UIViewController, ViewModelBindableWay {
+class ListViewController: UIViewController, ViewModelBindableType {
     
     @IBOutlet weak var addBtn: UIBarButtonItem!
     @IBOutlet weak var ListTable: UITableView!
     
-  var viewModel: ListViewModel!
+    var viewModel: ListViewModel!
     
     func bindViewModel() {
-        viewModel.title.drive(navigationItem.rx.title).disposed(by: rx.disposeBag)
+        viewModel.title
+            .drive(navigationItem.rx.title)
+            .disposed(by: rx.disposeBag)
         
         // 옵저버블과 테이블뷰를 바인딩하는 방식으로 진행됨
-        viewModel.memoList.bind(to: ListTable.rx.items(cellIdentifier: "cell")){ index,memo,cell in
+        viewModel.memoList.bind(to: ListTable.rx.items(cellIdentifier: "cell")){ index, memo, cell in
             cell.textLabel?.text = memo.context
         }
         .disposed(by: rx.disposeBag)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
-    
 }

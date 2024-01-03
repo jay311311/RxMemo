@@ -16,13 +16,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        let storage =  MemoryStorage()
-        let coordinator =  SceneCoordinator(window: window!)
-        let listViweModel =  ListViewModel(title: "my memo", sceneCoordinator: coordinator, storage: storage)
+        let storage = MemoryStorage()
+        let coordinator = SceneCoordinator(window: window!)
+        let listViweModel = ListViewModel(title: "my memo", sceneCoordinator: coordinator, storage: storage)
         
         let listScene = Scene.list(listViweModel)
         coordinator.shift(to: listScene, using: .root, animated: false)
-//        coordinator.transition(to :listScene, using : .root, animated :false )
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

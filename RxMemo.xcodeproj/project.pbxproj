@@ -22,10 +22,10 @@
 		67FC70CD28AA2BA600E79970 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70CC28AA2BA600E79970 /* ListViewModel.swift */; };
 		67FC70CF28AA2C0500E79970 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70CE28AA2C0500E79970 /* DetailViewModel.swift */; };
 		67FC70D128AA2C3700E79970 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70D028AA2C3700E79970 /* EditViewModel.swift */; };
-		67FC70D328AA2F0900E79970 /* ViewModelBindableWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70D228AA2F0900E79970 /* ViewModelBindableWay.swift */; };
+		67FC70D328AA2F0900E79970 /* ViewModelBindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70D228AA2F0900E79970 /* ViewModelBindableType.swift */; };
 		67FC70D528AA390300E79970 /* ShiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70D428AA390300E79970 /* ShiftModel.swift */; };
 		67FC70D728AA3A2D00E79970 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70D628AA3A2D00E79970 /* Scene.swift */; };
-		67FC70D928AA410200E79970 /* ScenCoordinatorWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70D828AA410200E79970 /* ScenCoordinatorWay.swift */; };
+		67FC70D928AA410200E79970 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70D828AA410200E79970 /* SceneCoordinatorType.swift */; };
 		67FC70DB28AA427000E79970 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70DA28AA427000E79970 /* SceneCoordinator.swift */; };
 		67FC70DD28ABD08000E79970 /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70DC28ABD08000E79970 /* CommonViewModel.swift */; };
 		6B76AD2B6AA101C146635CD2 /* Pods_RxMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2952F248A2738B3DEFDF82 /* Pods_RxMemo.framework */; };
@@ -49,10 +49,10 @@
 		67FC70CC28AA2BA600E79970 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		67FC70CE28AA2C0500E79970 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		67FC70D028AA2C3700E79970 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
-		67FC70D228AA2F0900E79970 /* ViewModelBindableWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindableWay.swift; sourceTree = "<group>"; };
+		67FC70D228AA2F0900E79970 /* ViewModelBindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindableType.swift; sourceTree = "<group>"; };
 		67FC70D428AA390300E79970 /* ShiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftModel.swift; sourceTree = "<group>"; };
 		67FC70D628AA3A2D00E79970 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
-		67FC70D828AA410200E79970 /* ScenCoordinatorWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenCoordinatorWay.swift; sourceTree = "<group>"; };
+		67FC70D828AA410200E79970 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
 		67FC70DA28AA427000E79970 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		67FC70DC28ABD08000E79970 /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
 		BDF4DFA885B08A9111123430 /* Pods-RxMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMemo.release.xcconfig"; path = "Target Support Files/Pods-RxMemo/Pods-RxMemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 			children = (
 				67FC70D428AA390300E79970 /* ShiftModel.swift */,
 				67FC70D628AA3A2D00E79970 /* Scene.swift */,
-				67FC70D828AA410200E79970 /* ScenCoordinatorWay.swift */,
+				67FC70D828AA410200E79970 /* SceneCoordinatorType.swift */,
 				67FC70DA28AA427000E79970 /* SceneCoordinator.swift */,
 			);
 			path = Scene;
@@ -186,7 +186,7 @@
 				67FC70CC28AA2BA600E79970 /* ListViewModel.swift */,
 				67FC70D028AA2C3700E79970 /* EditViewModel.swift */,
 				67FC70CE28AA2C0500E79970 /* DetailViewModel.swift */,
-				67FC70D228AA2F0900E79970 /* ViewModelBindableWay.swift */,
+				67FC70D228AA2F0900E79970 /* ViewModelBindableType.swift */,
 				67FC70DC28ABD08000E79970 /* CommonViewModel.swift */,
 			);
 			path = ViewModel;
@@ -322,9 +322,9 @@
 				67FC70C328AA28AB00E79970 /* DetailViewController.swift in Sources */,
 				67FC70DD28ABD08000E79970 /* CommonViewModel.swift in Sources */,
 				67FC70CF28AA2C0500E79970 /* DetailViewModel.swift in Sources */,
-				67FC70D928AA410200E79970 /* ScenCoordinatorWay.swift in Sources */,
+				67FC70D928AA410200E79970 /* SceneCoordinatorType.swift in Sources */,
 				67FC70C528AA28E400E79970 /* EditViewController.swift in Sources */,
-				67FC70D328AA2F0900E79970 /* ViewModelBindableWay.swift in Sources */,
+				67FC70D328AA2F0900E79970 /* ViewModelBindableType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +400,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -454,7 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

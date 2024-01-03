@@ -8,18 +8,18 @@
 import Foundation
 
 
-struct Memo: Equatable{
-    var context :String
-    var date  : Date
-    var identity : String
+struct Memo: Equatable {
+    var context: String
+    var date: Date
+    var identity: String
     
-    init(context :String, date:Date = Date()){
+    init(context: String, date: Date = Date()) {
         self.context = context
         self.date = date
         self.identity = "\(date.timeIntervalSinceReferenceDate)"
     }
     
-    init(original : Memo, updateContext:String ){
+    init(original: Memo, updateContext:String) {
         self = original
         self.context = updateContext
     }

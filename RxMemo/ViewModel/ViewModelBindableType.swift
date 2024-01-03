@@ -7,15 +7,15 @@
 
 import UIKit
 
-protocol ViewModelBindableWay{
-    associatedtype ViewModelWay
-    var viewModel : ViewModelWay! { get set}
+protocol ViewModelBindableType {
+    associatedtype ViewModelType
+    var viewModel: ViewModelType! { get set }
     func bindViewModel()
 }
 
-extension ViewModelBindableWay where Self: UIViewController{
+extension ViewModelBindableType where Self: UIViewController {
 
-    mutating func bind(viewModel: Self.ViewModelWay){
+    mutating func bind(viewModel: Self.ViewModelType){
         self.viewModel = viewModel
         loadViewIfNeeded()
         
