@@ -13,7 +13,7 @@ import NSObject_Rx
 class ListViewController: UIViewController, ViewModelBindableType {
     
     @IBOutlet weak var addBtn: UIBarButtonItem!
-    @IBOutlet weak var ListTable: UITableView!
+    @IBOutlet weak var listTableView: UITableView!
     
     var viewModel: ListViewModel!
     
@@ -22,13 +22,21 @@ class ListViewController: UIViewController, ViewModelBindableType {
             .drive(navigationItem.rx.title)
             .disposed(by: rx.disposeBag)
         
-        // 옵저버블과 테이블뷰를 바인딩하는 방식으로 진행됨
-        viewModel.memoList.bind(to: ListTable.rx.items(cellIdentifier: "cell")){ index, memo, cell in
+        viewModel.memoList.bind(to: listTableView.rx.items(cellIdentifier: "cell")){ index, memo, cell in
             cell.textLabel?.text = memo.context
         }
         .disposed(by: rx.disposeBag)
         
         addBtn.rx.action = viewModel.makeCreate()
+        
+        Observable.zip(listTableView.rx.modelSelected(Memo.self), listTableView.rx.itemSelected)
+            .withUnretained(self)
+            .do(onNext: { (vc, data) in
+                vc.listTableView.deselectRow(at: data.1, animated: true)
+            })
+            .map { $1.0 }
+            .bind(to: viewModel.moveToDetail.inputs)
+            .disposed(by: rx.disposeBag)
     }
     
     override func viewDidLoad() {

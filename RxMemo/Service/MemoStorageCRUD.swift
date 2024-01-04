@@ -18,7 +18,7 @@ protocol MemoStorageCRUD {
     
     
     @discardableResult
-    func UpdateMemo(memo: Memo, context: String) -> Observable<Memo>
+    func updateMemo(memo: Memo, context: String) -> Observable<Memo>
     
     @discardableResult
     func deleteMemo(memo: Memo) -> Observable<Memo>

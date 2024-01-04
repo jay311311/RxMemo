@@ -32,7 +32,7 @@ class MemoryStorage: MemoStorageCRUD {
     }
     
     @discardableResult
-    func UpdateMemo(memo: Memo, context: String) -> Observable<Memo> {
+    func updateMemo(memo: Memo, context: String) -> Observable<Memo> {
         let update = Memo(original: memo, updateContext: context)
         
         if let index  =  list.firstIndex(where: { $0 == memo }) {

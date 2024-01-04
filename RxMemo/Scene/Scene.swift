@@ -20,7 +20,7 @@ extension Scene {
         switch self {
         case .list(let listViewModel):
             guard let nav = storyboard.instantiateViewController(withIdentifier: "ListNav") as? UINavigationController else { fatalError() }
-            guard var listVC =  nav.viewControllers.first as? ListViewController else { fatalError() }
+            guard var listVC = nav.viewControllers.first as? ListViewController else { fatalError() }
             
             DispatchQueue.main.async {
                 listVC.bind(viewModel: listViewModel)
@@ -28,15 +28,15 @@ extension Scene {
             return nav
             
         case .detail(let detailViewModel):
-            guard let nav  =  storyboard.instantiateViewController(withIdentifier: "DetailVC") as? UINavigationController else { fatalError() }
-            guard var DetailVC =  nav.viewControllers.first as? DetailViewController  else { fatalError() }
+            
+            guard var DetailVC = storyboard.instantiateViewController(withIdentifier: "DetailVC") as? DetailViewController else { fatalError() }
             DispatchQueue.main.async {
                 DetailVC.bind(viewModel: detailViewModel)
             }
             return DetailVC
             
         case .edit(let editViewModel):
-            guard let nav  =  storyboard.instantiateViewController(withIdentifier: "EditNav") as? UINavigationController else { fatalError() }
+            guard let nav = storyboard.instantiateViewController(withIdentifier: "EditNav") as? UINavigationController else { fatalError() }
             guard var EditNav =  nav.viewControllers.first as? EditViewController  else { fatalError() }
             DispatchQueue.main.async {
                 EditNav.bind(viewModel: editViewModel)
