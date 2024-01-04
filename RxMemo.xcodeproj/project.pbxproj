@@ -15,6 +15,7 @@
 		670C03BB28AA055C00C41823 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670C03B928AA055C00C41823 /* LaunchScreen.storyboard */; };
 		670C03CA28AA14F700C41823 /* MemoStorageCRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C03C928AA14F700C41823 /* MemoStorageCRUD.swift */; };
 		670C03CE28AA167000C41823 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C03CD28AA167000C41823 /* MemoryStorage.swift */; };
+		67E4FBF42B4673E50031E299 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E4FBF32B4673E50031E299 /* CoreDataStorage.swift */; };
 		67FC70C128AA284700E79970 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70C028AA284700E79970 /* ListViewController.swift */; };
 		67FC70C328AA28AB00E79970 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70C228AA28AB00E79970 /* DetailViewController.swift */; };
 		67FC70C528AA28E400E79970 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FC70C428AA28E400E79970 /* EditViewController.swift */; };
@@ -42,6 +43,7 @@
 		670C03BC28AA055C00C41823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		670C03C928AA14F700C41823 /* MemoStorageCRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStorageCRUD.swift; sourceTree = "<group>"; };
 		670C03CD28AA167000C41823 /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
+		67E4FBF32B4673E50031E299 /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		67FC70C028AA284700E79970 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		67FC70C228AA28AB00E79970 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		67FC70C428AA28E400E79970 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				670C03B428AA055B00C41823 /* RxMemo.xcdatamodeld */,
+				67E4FBF32B4673E50031E299 /* CoreDataStorage.swift */,
 			);
 			path = CoreDataStorage;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67FC70D128AA2C3700E79970 /* EditViewModel.swift in Sources */,
+				67E4FBF42B4673E50031E299 /* CoreDataStorage.swift in Sources */,
 				67FC70CD28AA2BA600E79970 /* ListViewModel.swift in Sources */,
 				67FC70DB28AA427000E79970 /* SceneCoordinator.swift in Sources */,
 				67FC70D728AA3A2D00E79970 /* Scene.swift in Sources */,

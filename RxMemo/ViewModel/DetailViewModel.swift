@@ -12,7 +12,7 @@ import Action
 
 class DetailViewModel: CommonViewModel {
     
-    let memo: Memo
+    var memo: Memo
     
     private var fomatter: DateFormatter = {
         let f =  DateFormatter()
@@ -51,6 +51,7 @@ class DetailViewModel: CommonViewModel {
     func saveMemo(memo: Memo) -> Action<String, Void> {
         return Action { input  in
              self.storage.updateMemo(memo: memo, context: input)
+                .do(onNext: { self.memo = $0 })
                 .map { [$0.context, self.fomatter.string(from: $0.date)] }
                 .subscribe(onNext: { self.contents.onNext($0) })
                 .disposed(by: self.rx.disposeBag)
