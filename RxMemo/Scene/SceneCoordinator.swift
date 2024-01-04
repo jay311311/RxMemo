@@ -85,4 +85,15 @@ class SceneCoordinator: SceneCoordinatorType {
             return Disposables.create()
         }
     }
+    
+    @discardableResult
+    func share(memo: String, animated: Bool) -> Completable {
+        return Completable.create { [unowned self] completable in
+            let activityView = UIActivityViewController(activityItems: [memo], applicationActivities: nil)
+            currentVC.present(activityView, animated: animated)
+            completable(.completed)
+
+            return Disposables.create()
+        }
+    }
 }

@@ -37,6 +37,11 @@ class ListViewController: UIViewController, ViewModelBindableType {
             .map { $1.0 }
             .bind(to: viewModel.moveToDetail.inputs)
             .disposed(by: rx.disposeBag)
+        
+        listTableView.rx.modelDeleted(Memo.self)
+            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+            .bind(to: viewModel.deleteMemo.inputs)
+            .disposed(by: rx.disposeBag)
     }
     
     override func viewDidLoad() {

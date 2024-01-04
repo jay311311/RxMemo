@@ -14,4 +14,7 @@ protocol SceneCoordinatorType {
    
     @discardableResult
     func close(animated: Bool) -> Completable
+    
+    @discardableResult
+    func share(memo: String, animated: Bool) -> Completable
 }

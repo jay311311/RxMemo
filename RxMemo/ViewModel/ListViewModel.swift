@@ -46,7 +46,7 @@ class ListViewModel: CommonViewModel {
         return Action { memo in
             let detailViewModel = DetailViewModel(
                 memo: memo,
-                title: "상세 메모 보기",
+                title: "메모_상세",
                 sceneCoordinator: self.sceneCoordinator,
                 storage: self.storage
             )
@@ -56,6 +56,13 @@ class ListViewModel: CommonViewModel {
             return self.sceneCoordinator.shift(to: detailScene, using: .push, animated: true)
                 .asObservable()
                 .map { _ in }
+        }
+    }()
+    
+    lazy var deleteMemo: Action<Memo, Void> = {
+        return Action { memo in
+            return self.storage.deleteMemo(memo: memo)
+                .map{ _  in }
         }
     }()
 }

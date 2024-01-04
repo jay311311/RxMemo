@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import RxSwift
 
 class DetailViewController: UIViewController,ViewModelBindableType {
 
-    @IBOutlet weak var deleteBtn: UIToolbar!
+    @IBOutlet weak var deleteBtn: UIBarButtonItem!
     @IBOutlet weak var shareBtn: UIBarButtonItem!
     @IBOutlet weak var editBtn: UIBarButtonItem!
     @IBOutlet weak var contentTableView: UITableView!
@@ -38,6 +39,19 @@ class DetailViewController: UIViewController,ViewModelBindableType {
                 
             }
             .disposed(by: rx.disposeBag)
+        
+        editBtn.rx.action = viewModel.editMemo()
+        shareBtn.rx.action = viewModel.shareMemo()
+        deleteBtn.rx.action = viewModel.deleteMemo()
+//        shareBtn.rx.tap
+//            .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+//            .withUnretained(self)
+//            .subscribe(onNext: {(vc, _) in
+//                let memo = vc.viewModel.memo.context
+//                let activityView = UIActivityViewController(activityItems: [memo], applicationActivities: nil)
+//                vc.present(activityView, animated: true)
+//            })
+//            .disposed(by: rx.disposeBag)
         
 //        var backBtn = UIBarButtonItem(title: nil, style: .done, target: nil, action: nil)
 //        viewModel.title

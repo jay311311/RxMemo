@@ -47,4 +47,53 @@ class DetailViewModel: CommonViewModel {
             .asObservable()
             .map({ _ in })
     }
+    
+    func saveMemo(memo: Memo) -> Action<String, Void> {
+        return Action { input  in
+             self.storage.updateMemo(memo: memo, context: input)
+                .map { [$0.context, self.fomatter.string(from: $0.date)] }
+                .subscribe(onNext: { self.contents.onNext($0) })
+                .disposed(by: self.rx.disposeBag)
+            
+            return Observable.empty()
+        }
+    }
+    
+    func editMemo() -> CocoaAction {
+        return CocoaAction { _ in
+            let editViewModel = EditViewModel(
+                title: "메모 편집",
+                context: self.memo.context,
+                sceneCoordinator: self.sceneCoordinator,
+                storage: self.storage,
+                saveAction: self.saveMemo(memo: self.memo)
+            )
+            
+            let editScene = Scene.edit(editViewModel)
+            
+            return self.sceneCoordinator.shift(to: editScene, using: .modal, animated: true)
+                .asObservable()
+                .map { _ in }
+        }
+    }
+    
+    func shareMemo() -> CocoaAction {
+        return CocoaAction { _ in
+            let memo = self.memo.context
+            
+            return self.sceneCoordinator.share(memo: memo, animated: true)
+                .asObservable()
+                .map { _ in }
+        }
+    }
+    
+    func deleteMemo() -> CocoaAction {
+        return Action { inputs in
+            self.storage.deleteMemo(memo: self.memo)
+
+            return self.sceneCoordinator.close(animated: true)
+                .asObservable()
+                .map { _ in }
+        }
+    }
 }

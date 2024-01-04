@@ -194,7 +194,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="contentTableView" destination="wCR-QQ-YPH" id="Lun-n8-fqR"/>
-                        <outlet property="deleteBtn" destination="cMX-vO-7er" id="uYO-pn-axq"/>
+                        <outlet property="deleteBtn" destination="AQ9-la-zfr" id="CXj-j8-JuS"/>
                         <outlet property="editBtn" destination="WuM-2S-tae" id="ebU-rv-MQS"/>
                         <outlet property="shareBtn" destination="jlT-Tj-ESu" id="Pwy-mz-PZ2"/>
                     </connections>

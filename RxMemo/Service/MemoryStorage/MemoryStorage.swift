@@ -35,7 +35,7 @@ class MemoryStorage: MemoStorageCRUD {
     func updateMemo(memo: Memo, context: String) -> Observable<Memo> {
         let update = Memo(original: memo, updateContext: context)
         
-        if let index  =  list.firstIndex(where: { $0 == memo }) {
+        if let index = list.firstIndex(where: { $0 == memo }) {
             list.remove(at: index)
             list.insert(update, at: index)
         }
